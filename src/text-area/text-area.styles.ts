@@ -28,6 +28,8 @@ import {
 	scrollbarWidth,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
+	inputValidationErrorBackground,
+	inputValidationErrorBorder,
 } from '../design-tokens.js';
 
 export const textAreaStyles = (
@@ -119,5 +121,9 @@ export const textAreaStyles = (
 	}
 	:host([disabled]) .control {
 		border-color: ${dropdownBorder};
+	}
+	:host(:not([disabled]):not([readonly])) .control:user-invalid {
+		background: ${inputValidationErrorBackground}!important;
+		border-color: ${inputValidationErrorBorder}!important;
 	}
 `;

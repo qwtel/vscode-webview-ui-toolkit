@@ -121,6 +121,8 @@ export const dropdownListMaxHeight = create<string>('dropdown-list-max-height').
 export const inputBackground = create<string>('input-background', '--vscode-input-background').withDefault('#3c3c3c');
 export const inputForeground = create<string>('input-foreground', '--vscode-input-foreground').withDefault('#cccccc');
 export const inputPlaceholderForeground = create<string>('input-placeholder-foreground', '--vscode-input-placeholderForeground').withDefault('#cccccc');
+export const inputValidationErrorBackground = create<string>('input-validation-error-background', '--vscode-inputValidation-warningBackground');
+export const inputValidationErrorBorder = create<string>('input-validation-error-border', '--vscode-inputValidation-warningBorder');
 
 /**
  * Link design tokens.

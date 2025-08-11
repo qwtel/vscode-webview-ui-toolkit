@@ -24,6 +24,8 @@ import {
 	inputMinWidth,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
+	inputValidationErrorBackground,
+	inputValidationErrorBorder,
 } from '../design-tokens.js';
 
 export const textFieldStyles = (
@@ -107,6 +109,10 @@ export const textFieldStyles = (
 	}
 	:host(:focus-within:not([disabled])) .root {
 		border-color: ${focusBorder};
+	}
+	:host(:not([disabled]):not([readonly])) .root:has(.control:user-invalid) {
+		background: ${inputValidationErrorBackground};
+		border-color: ${inputValidationErrorBorder};
 	}
 	:host([disabled]) .label,
 	:host([readonly]) .label,
